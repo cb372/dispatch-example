@@ -47,12 +47,6 @@
     val h = new dispatch.thread.Http
     val result: Future[String] = h(url("http://google.com/") as_str)
 
-### Future
-
-返ってくる`Future`を`apply()`すれば結果が得られる。
-
-`Future`の状態を確認するには`isSet`を呼び出す。
-
 * HTTP（nio）
 
 依存性：dispatch-nio
@@ -66,6 +60,12 @@
 
     val h = new dispatch.gae.Http
     val result: String = h(url("http://google.com/") as_str)
+
+### Futureについて
+
+返ってくる`Future`を`apply()`すれば結果が得られる。
+
+`Future`の状態を確認するには`isSet`を呼び出す。
 
 ## Request
 
