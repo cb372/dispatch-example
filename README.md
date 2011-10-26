@@ -146,7 +146,7 @@
 
 依存性：dispatch-lift-json, dispatch-http-json（たしか必要）
 
-同情、`>#`を使うけど、ブロックの中にlift-jsonのASTが使える。
+同上、`>#`を使うけど、ブロックの中にlift-jsonのASTが使える。
 
 ## その他
 
