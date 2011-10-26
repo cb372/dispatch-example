@@ -125,3 +125,37 @@
 
 * `</>` ボディをXHTMLとして扱って処理する
 
+## json
+
+依存性：dispatch-json, dispatch-http-json
+
+ハンドラ`>#`を使う。
+
+例）
+
+    import dispatch.json._
+    import dispatch.json.JsHttp._
+    
+    val result = url("http://example.com/a/b/") <# { 
+      list ! str
+    }
+
+正直、このextractorの使い方良く分かってない。lift-json使おう。
+
+## lift-json
+
+依存性：dispatch-lift-json, dispatch-http-json（たしか必要）
+
+同情、`>#`を使うけど、ブロックの中にlift-jsonのASTが使える。
+
+## その他
+
+* dispatch-futures: Futureですごいことできそう
+
+* dispatch-mime: mime-type関連
+
+* dispatch-oauth: OAuth認証を楽にしてくれる
+
+* http://github.com/n8han 以下：S3連携、CouchDB連携、。。。
+
+
