@@ -1,68 +1,68 @@
-# ƒŠƒ“ƒN
+# ãƒªãƒ³ã‚¯
 
 * [Dispatch Github](https://github.com/n8han/Databinder-Dispatch)
 
-* [Dispatchƒ`ƒ…[ƒgƒŠƒAƒ‹](http://dispatch.databinder.net/Dispatch.html)
+* [Dispatchãƒãƒ¥ãƒ¼ãƒˆãƒªã‚¢ãƒ«](http://dispatch.databinder.net/Dispatch.html)
 
-* [Dispatch APIƒŒƒtƒ@ƒŒƒ“ƒX](http://databinder.net/dispatch-doc/#package)
+* [Dispatch APIãƒ¬ãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹](http://databinder.net/dispatch-doc/#package)
 
-* [TwitterƒTƒ“ƒvƒ‹](https://github.com/n8han/dispatch-twitter)
+* [Twitterã‚µãƒ³ãƒ—ãƒ«](https://github.com/n8han/dispatch-twitter)
 
-# ‚±‚ÌƒTƒ€ƒvƒ‹‚ÌUsage
+# ã“ã®ã‚µãƒ ãƒ—ãƒ«ã®Usage
 
     sbt console
     
     :load src/scala/Atnd.scala
     
-    // @shibuyascala‚ª“o˜^‚µ‚½AtndƒCƒxƒ“ƒg‚ÌID‚ğæ“¾‚·‚é
+    // @shibuyascalaãŒç™»éŒ²ã—ãŸAtndã‚¤ãƒ™ãƒ³ãƒˆã®IDã‚’å–å¾—ã™ã‚‹
     getEventsOwnedByUser("shibuyascala")
     
-    // @cbirchall‚ªQ‰Á‚µ‚½AtndƒCƒxƒ“ƒg‚ÌID‚ğæ“¾‚·‚é
+    // @cbirchallãŒå‚åŠ ã—ãŸAtndã‚¤ãƒ™ãƒ³ãƒˆã®IDã‚’å–å¾—ã™ã‚‹
     getEventsAttendedByUser("cbirchall")
     
-    // @shibuyascala‚ª“o˜^‚µ‚½AtndƒCƒxƒ“ƒg‚Ì–¼‘O‚ğæ“¾‚·‚éi•¶š‰»‚¯‚·‚éj
+    // @shibuyascalaãŒç™»éŒ²ã—ãŸAtndã‚¤ãƒ™ãƒ³ãƒˆã®åå‰ã‚’å–å¾—ã™ã‚‹ï¼ˆæ–‡å­—åŒ–ã‘ã™ã‚‹ï¼‰
     getEventTitles(getEventsOwnedByUser("shibuyascala"))
 
-# Dispatch‚É‚Â‚¢‚Ä
+# Dispatchã«ã¤ã„ã¦
 
-## Šî–{“I‚Èg‚¢•û
+## åŸºæœ¬çš„ãªä½¿ã„æ–¹
 
     val result = <executor>(<request> <response handler>)
 
 ## Executor
 
-* HTTPi“¯ˆêƒXƒŒƒbƒhj
+* HTTPï¼ˆåŒä¸€ã‚¹ãƒ¬ãƒƒãƒ‰ï¼‰
 
-ˆË‘¶«Fdispatch-http
+ä¾å­˜æ€§ï¼šdispatch-http
 
-“à•”‚ÅApache HttpClientg—p
+å†…éƒ¨ã§Apache HttpClientä½¿ç”¨
 
     val h = new dispatch.Http
     val result: String = h(url("http://google.com/") as_str)
 
-* HTTPi•ÊƒXƒŒƒbƒhj
+* HTTPï¼ˆåˆ¥ã‚¹ãƒ¬ãƒƒãƒ‰ï¼‰
 
-ˆË‘¶«Fdispatch-http
+ä¾å­˜æ€§ï¼šdispatch-http
 
     val h = new dispatch.thread.Http
     val result: Future[String] = h(url("http://google.com/") as_str)
 
 ### Future
 
-•Ô‚Á‚Ä‚­‚é`Future`‚ğ`apply()`‚·‚ê‚ÎŒ‹‰Ê‚ª“¾‚ç‚ê‚éB
+è¿”ã£ã¦ãã‚‹`Future`ã‚’`apply()`ã™ã‚Œã°çµæœãŒå¾—ã‚‰ã‚Œã‚‹ã€‚
 
-`Future`‚Ìó‘Ô‚ğŠm”F‚·‚é‚É‚Í`isSet`‚ğŒÄ‚Ño‚·B
+`Future`ã®çŠ¶æ…‹ã‚’ç¢ºèªã™ã‚‹ã«ã¯`isSet`ã‚’å‘¼ã³å‡ºã™ã€‚
 
-* HTTPinioj
+* HTTPï¼ˆnioï¼‰
 
-ˆË‘¶«Fdispatch-nio
+ä¾å­˜æ€§ï¼šdispatch-nio
 
     val h = new dispatch.nio.Http
     val result: Future[String] = h(url("http://google.com/") as_str)
 
-* Google App Engineê—p
+* Google App Engineå°‚ç”¨
 
-ˆË‘¶«Fdispatch-gae
+ä¾å­˜æ€§ï¼šdispatch-gae
 
     val h = new dispatch.gae.Http
     val result: String = h(url("http://google.com/") as_str)
@@ -71,57 +71,57 @@
 
 ### URL
 
-* `url()`ƒƒ\ƒbƒh‚ğg‚¤
+* `url()`ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ã†
 
     val url: Request = url("http://example.com/a/b/")
 
-* ƒzƒXƒg‚ÆƒpƒX‚ğ‘g‚İ‡‚í‚¹‚é
+* ãƒ›ã‚¹ãƒˆã¨ãƒ‘ã‚¹ã‚’çµ„ã¿åˆã‚ã›ã‚‹
 
     val url: Request = :/("example.com") / "a" / "b"
 
 ### Request verbs
 
-ƒŠƒNƒGƒXƒg‚ğ•ÏŠ·‚·‚é‚½‚ß‚Ì‰‰ZqB
+ãƒªã‚¯ã‚¨ã‚¹ãƒˆã‚’å¤‰æ›ã™ã‚‹ãŸã‚ã®æ¼”ç®—å­ã€‚
 
-* `<:<` HTTPƒwƒbƒ_‚ğw’è
+* `<:<` HTTPãƒ˜ãƒƒãƒ€ã‚’æŒ‡å®š
 
-* `<<` HTTP POST‚Ìƒ{ƒfƒB‚ğw’è
+* `<<` HTTP POSTã®ãƒœãƒ‡ã‚£ã‚’æŒ‡å®š
 
-* `<<<` HTTP PUT‚Ìƒ{ƒfƒB‚ğw’è
+* `<<<` HTTP PUTã®ãƒœãƒ‡ã‚£ã‚’æŒ‡å®š
 
-* `<<?` URLƒNƒGƒŠƒpƒ‰ƒ[ƒ^‚ğ•t‚¯‚é
+* `<<?` URLã‚¯ã‚¨ãƒªãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ä»˜ã‘ã‚‹
 
-* `>\` •¶šƒR[ƒh‚ğİ’è
+* `>\` æ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’è¨­å®š
 
-* `as` HTTP BASIC/DIGEST”FØ‚Ìƒ†[ƒU–¼‚ÆƒpƒXƒ[ƒh‚ğw’è
+* `as` HTTP BASIC/DIGESTèªè¨¼ã®ãƒ¦ãƒ¼ã‚¶åã¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’æŒ‡å®š
 
-* `gzip` Gzipˆ³k‚ğ—Š‚Ş
+* `gzip` Gzipåœ§ç¸®ã‚’é ¼ã‚€
 
-* `secure` HTTPS‚ğg‚¤
+* `secure` HTTPSã‚’ä½¿ã†
 
-—áj
+ä¾‹ï¼‰
 
     val req = url("http://example.com/a/b/") <<? Map("user" -> "chris")
 
 ## Response handlers
 
-•Ô‚Á‚Ä‚­‚éHTTPƒŒƒXƒ|ƒ“ƒX‚ğˆ—‚·‚éƒnƒ“ƒhƒ‰B
+è¿”ã£ã¦ãã‚‹HTTPãƒ¬ã‚¹ãƒãƒ³ã‚¹ã‚’å‡¦ç†ã™ã‚‹ãƒãƒ³ãƒ‰ãƒ©ã€‚
 
-* `>|` ƒŒƒXƒ|ƒ“ƒX‚ğ–³‹‚·‚é
+* `>|` ãƒ¬ã‚¹ãƒãƒ³ã‚¹ã‚’ç„¡è¦–ã™ã‚‹
 
-* `as_str` ƒ{ƒfƒB‚ğString‚Æ‚µ‚Ä•Ô‚·
+* `as_str` ãƒœãƒ‡ã‚£ã‚’Stringã¨ã—ã¦è¿”ã™
 
-* `>-` ƒ{ƒfƒB‚ğString‚Æ‚µ‚Äˆµ‚Á‚Äˆ—‚·‚é
+* `>-` ãƒœãƒ‡ã‚£ã‚’Stringã¨ã—ã¦æ‰±ã£ã¦å‡¦ç†ã™ã‚‹
 
-* `as_source` ƒ{ƒfƒB‚ğscala.io.Source‚Æ‚µ‚Ä•Ô‚·
+* `as_source` ãƒœãƒ‡ã‚£ã‚’scala.io.Sourceã¨ã—ã¦è¿”ã™
 
-* `>~` ƒ{ƒfƒB‚ğscala.io.Source‚Æ‚µ‚Äˆµ‚Á‚Äˆ—‚·‚é
+* `>~` ãƒœãƒ‡ã‚£ã‚’scala.io.Sourceã¨ã—ã¦æ‰±ã£ã¦å‡¦ç†ã™ã‚‹
 
-* `>:>` ƒwƒbƒ_‚ğMap‚Æ‚µ‚Äˆµ‚Á‚Äˆ—‚·‚é
+* `>:>` ãƒ˜ãƒƒãƒ€ã‚’Mapã¨ã—ã¦æ‰±ã£ã¦å‡¦ç†ã™ã‚‹
 
-* `>>>` ƒ{ƒfƒB‚ğOutputStream‚É‘‚«‚Ş
+* `>>>` ãƒœãƒ‡ã‚£ã‚’OutputStreamã«æ›¸ãè¾¼ã‚€
 
-* `<>` ƒ{ƒfƒB‚ğXML‚Æ‚µ‚Äˆµ‚Á‚Äˆ—‚·‚é
+* `<>` ãƒœãƒ‡ã‚£ã‚’XMLã¨ã—ã¦æ‰±ã£ã¦å‡¦ç†ã™ã‚‹
 
-* `</>` ƒ{ƒfƒB‚ğXHTML‚Æ‚µ‚Äˆµ‚Á‚Äˆ—‚·‚é
+* `</>` ãƒœãƒ‡ã‚£ã‚’XHTMLã¨ã—ã¦æ‰±ã£ã¦å‡¦ç†ã™ã‚‹
 
