@@ -136,7 +136,7 @@
     import dispatch.json._
     import dispatch.json.JsHttp._
     
-    val result = url("http://example.com/a/b/") <# { 
+    val result = url("http://example.com/a/b/") ># { 
       list ! str
     }
 
