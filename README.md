@@ -1,6 +1,6 @@
 # リンク
 
-* [Dispatch Github](https://github.com/n8han/Databinder-Dispatch)
+* [Dispatch Github](https://github.com/dispatch/dispatch)
 
 * [Dispatchチュートリアル](http://dispatch.databinder.net/Dispatch.html)
 
